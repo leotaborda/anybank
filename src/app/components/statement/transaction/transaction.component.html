@@ -1,0 +1,7 @@
+<div class="transaction">
+  <span class="value">{{
+    (transaction().type === TransactionType.WITHDRAWAL ? -transaction().value : transaction().value)
+      | currency : 'BRL'
+  }}</span>
+  <span class="date">{{ transaction().today | date : 'dd/MM/yyyy' }}</span>
+</div>
