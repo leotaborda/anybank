@@ -13,3 +13,13 @@
   flex-direction: column;
   gap: 1.5rem;
 }
+
+.statement {
+    flex-basis: 17rem;
+}
+
+@media screen and (max-width: 48rem) {
+    .statement {
+        flex-basis: 100%;
+    }
+}

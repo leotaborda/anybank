@@ -2,10 +2,11 @@ import { Component, computed, signal } from '@angular/core';
 import { BannerComponent } from './components/banner/banner.component';
 import { FormNewTransactionComponent } from './components/form-new-transaction/form-new-transaction.component';
 import { Transaction, TypeTransaction } from './models/transaction';
+import { StatementComponent } from "./components/statement/statement.component";
 
 @Component({
   selector: 'app-root',
-  imports: [BannerComponent, FormNewTransactionComponent],
+  imports: [BannerComponent, FormNewTransactionComponent, StatementComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
