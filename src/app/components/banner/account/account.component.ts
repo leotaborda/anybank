@@ -1,5 +1,5 @@
 import { CurrencyPipe } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-account',
@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './account.component.css',
 })
 export class AccountComponent {
-
+  currentBalance = input.required<number>();
 }

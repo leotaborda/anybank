@@ -1,6 +1,6 @@
 <div class="app">
   <div class="banner-form-wrapper">
-    <app-banner />
+    <app-banner [currentBalance]="currentBalance()" />
     <app-form-new-transaction (createdTransaction)="processTransaction($event)" />
   </div>
 </div>
