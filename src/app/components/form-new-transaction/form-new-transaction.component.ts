@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Transaction, TypeTransaction } from '../../models/transaction';
 
 @Component({
   selector: 'app-form-new-transaction',
@@ -11,8 +12,16 @@ export class FormNewTransactionComponent {
   transactionType = "";
   transactionValue = "";
 
+  createdTransaction = output<Transaction>();
+
   onSubmit() {
-    console.log(this.transactionType);
-    console.log(this.transactionValue);
+    const transaction = new Transaction(
+      this.transactionType as TypeTransaction,
+      Number(this.transactionValue)
+    );
+
+    this.createdTransaction.emit(transaction);
+    this.transactionType = "";
+    this.transactionValue = "";
   }
 }
