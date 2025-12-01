@@ -1,59 +1,56 @@
-# Anybank
+# Anybank - Seu Banco Digital Simples e Moderno
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.6.
+Este é um projeto desenvolvido durante o curso "Angular 19: aplicando interação entre componentes com inputs e outputs" da Alura. O Anybank é uma aplicação web que simula um banco digital, permitindo a visualização de saldo, extrato e a realização de depósitos.
 
-## Development server
+## Funcionalidades
 
-To start a local development server, run:
+-   **Visualização de Saldo:** Exibe o saldo formatado com pipe de moeda e internacionalização.
+-   **Extrato Dinâmico:** Apresenta uma lista de transações formatadas, utilizando uma biblioteca específica para formatação de datas.
+-   **Formulário de Depósito:** Permite a realização de depósitos através de um formulário interativo com `ngModel`.
+-   **Interação entre Componentes:** Utiliza `@Input`, `@Output`, `signals` e `computed` para uma experiência de usuário reativa e dinâmica.
 
-```bash
-ng serve
-```
+## Tecnologias Utilizadas
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+-   Angular 19
+-   TypeScript
+-   Bibliotecas de formatação de data
+-   `ngModel` para formulários
 
-## Code scaffolding
+## Como Executar o Projeto
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+1.  Clone este repositório:
 
-```bash
-ng generate component component-name
-```
+    ```bash
+    git clone [URL do seu repositório]
+    ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+2.  Navegue até o diretório do projeto:
 
-```bash
-ng generate --help
-```
+    ```bash
+    cd anybank
+    ```
 
-## Building
+3.  Instale as dependências:
 
-To build the project run:
+    ```bash
+    npm install
+    ```
 
-```bash
-ng build
-```
+4.  Inicie o servidor de desenvolvimento:
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+    ```bash
+    ng serve
+    ```
 
-## Running unit tests
+5.  Abra o navegador e acesse `http://localhost:4200/`.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## Contribuição
 
-```bash
-ng test
-```
+Sinta-se à vontade para contribuir com melhorias e novas funcionalidades!
 
-## Running end-to-end tests
+## Créditos
 
-For end-to-end (e2e) testing, run:
+Desenvolvido durante o curso "Angular 19: aplicando interação entre componentes com inputs e outputs" da Alura.
 
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+-   Instrutor: Antônio Evaldo
+-   Alura: [https://www.alura.com.br/](https://www.alura.com.br/)
