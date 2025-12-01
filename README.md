@@ -47,10 +47,3 @@ Este é um projeto desenvolvido durante o curso "Angular 19: aplicando interaç�
 ## Contribuição
 
 Sinta-se à vontade para contribuir com melhorias e novas funcionalidades!
-
-## Créditos
-
-Desenvolvido durante o curso "Angular 19: aplicando interação entre componentes com inputs e outputs" da Alura.
-
--   Instrutor: Antônio Evaldo
--   Alura: [https://www.alura.com.br/](https://www.alura.com.br/)
