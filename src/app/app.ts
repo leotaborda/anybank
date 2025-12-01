@@ -1,7 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 import { BannerComponent } from './components/banner/banner.component';
 import { FormNewTransactionComponent } from './components/form-new-transaction/form-new-transaction.component';
-import { Transaction } from './models/transaction';
+import { Transaction, TypeTransaction } from './models/transaction';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +9,24 @@ import { Transaction } from './models/transaction';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
+
 export class App {
+  transactions = signal<Transaction[]>([]);
+  currentBalance = computed(() => {
+    return this.transactions().reduce((acc, currentTransaction) => {
+      switch (currentTransaction.type) {
+        case TypeTransaction.DEPOSIT:
+          return acc + currentTransaction.value;
+        case TypeTransaction.WITHDRAWAL:
+          return acc - currentTransaction.value;
+        default:
+          throw new Error('Tipo de transação inválida!');
+      }
+    }, 0);
+  });
+
   processTransaction(transaction: Transaction) {
-    console.log(transaction);
+    this.transactions.update((currentList) => [transaction, ...currentList]);
+    console.log(this.transactions());
   }
 }
