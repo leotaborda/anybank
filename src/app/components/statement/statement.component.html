@@ -1,0 +1,13 @@
+<aside class="statement">
+  <h2 class="title">Extrato</h2>
+
+  <ul class="transactions">
+    @for (transaction of transactions(); track transaction.id) {
+    <li>
+      <app-transaction [transaction]="transaction" />
+    </li>
+    } @empty {
+    <li aria-hidden="true">No momento não há transações</li>
+    }
+  </ul>
+</aside>
