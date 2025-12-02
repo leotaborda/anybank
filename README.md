@@ -1,4 +1,4 @@
-# Anybank - Seu Banco Digital Simples e Moderno
+# Anybank
 
 Este é um projeto desenvolvido durante o curso "Angular 19: aplicando interação entre componentes com inputs e outputs" da Alura. O Anybank é uma aplicação web que simula um banco digital, permitindo a visualização de saldo, extrato e a realização de depósitos.
 
